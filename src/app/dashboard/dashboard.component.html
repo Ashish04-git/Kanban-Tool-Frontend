@@ -1,0 +1,28 @@
+<!-- <h1>Kanban</h1>
+
+<a [routerLink]="['/user']" class="btn btn-primary">User</a>&nbsp;
+<a [routerLink]="['/project']" class="btn btn-primary">Project</a>&nbsp;
+<a [routerLink]="['/projecttask']" class="btn btn-primary">Project Tasks</a>
+
+<router-outlet>
+
+    
+</router-outlet> -->
+
+<body>
+    <div class="background">
+        <div class="topnav">
+            <h1>Dashboard</h1>
+          </div>
+    <div class="buttons">
+        <div class="row1">
+    <button class="glow-on-hover" [routerLink]="['/user']" type="button">User</button>
+    <button class="glow-on-hover" [routerLink]="['/project']" type="button">Project</button>
+        </div>   
+        <div class="row2">
+    <button class="glow-on-hover" [routerLink]="['/projecttask']" type="button">Project Task</button>
+    <!-- <button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button> -->
+        </div>
+    </div>
+    </div>
+</body>

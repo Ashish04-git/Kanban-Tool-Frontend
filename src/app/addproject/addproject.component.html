@@ -1,0 +1,106 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Add New Project
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form #frm="ngForm" >
+           
+                <label for="id">Project Id</label>
+                <input type="text" #id="ngModel" name="project.id" id="" class="form-control" placeholder="Enter Project Id"  required pattern="[0-9]{1,2}" [(ngModel)] = "project.id">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Project Id must be Entered<br>Enter a number maximum 2 digit
+            </div>
+            <br>
+           <div class="form-group" >
+                <label for="name">Project Name</label>
+                <input type="text"   name="project.projectName" id="" class="form-control" placeholder="Enter Project Name"  required pattern="[a-zA-Z]+" [(ngModel)] = "project.projectName">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter minimum 3 letters</div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Project Identifier</label>
+                <input type="text"   name="project.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "project.projectIdentifier">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter unique identifier</div>
+
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Description</label>
+                <input type="text"   name="project.description" id="" class="form-control" placeholder="Enter description" required pattern="[A-Za-z]+" [(ngModel)] = "project.description">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger"></div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Project Start date</label>
+                <input type="text"   name="project.startDate" id="" class="form-control" placeholder="Enter start date" required [(ngModel)] = "project.startDate">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter start date in yyyy-mm-dd format</div>
+  
+  
+            </div> 
+            
+            <br>
+            <div class="form-group">
+                <label for="name">Project End date</label>
+                <input type="text"   name="project.endDate" id="" class="form-control" placeholder="Enter end date" required [(ngModel)] = "project.endDate">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter end date in yyyy-mm-dd format</div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Project created at</label>
+                <input type="text"   name="project.createdAt" id="" class="form-control" placeholder="Enter created date" required  [(ngModel)] = "project.createdAt">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter end date in yyyy-mm-dd format</div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Project updated at</label>
+                <input type="text"   name="project.updateAt" id="" class="form-control" placeholder="Enter updated date" required [(ngModel)] = "project.updateAt">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter end date in yyyy-mm-dd format</div>
+  
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Backlog ID</label>
+                <input type="text"   name="project.backlog.bid" id="" class="form-control" placeholder="Enter backlog Id" required pattern="[0-9]{3}" [(ngModel)] = "project.backlog.bid">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter 3 digit ID</div>
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Backlog PT Sequence</label>
+                <input type="text"   name="project.backlog.ptSequence" id="" class="form-control" placeholder="Enter pt seq" required pattern="[0-9]{3}" [(ngModel)] = "project.backlog.ptSequence">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter 3 digit sequence</div>
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Backlog Identifier</label>
+                <input type="text"   name="project.backlog.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "project.backlog.projectIdentifier">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter unique identifier</div>
+
+            </div>
+            <br>
+            
+            <div class="from-group">
+                 <button type="submit" [disabled]="frm.invalid" (click)="addProject()" class="btn btn-primary btn-md">Add Project</button>
+            </div>
+            <br>
+        </form>
+      </div>
+    </div>
+  </div>

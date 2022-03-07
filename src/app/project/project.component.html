@@ -1,0 +1,35 @@
+<!-- <br>
+
+<a [routerLink]="['/viewprojects']" class="btn btn-primary">View Projects</a>&nbsp;
+<a [routerLink]="['/addproject']" class="btn btn-primary">Add Project</a>&nbsp;
+<a [routerLink]="['/deleteproject']" class="btn btn-primary">Delete Project</a>&nbsp;
+<a [routerLink]="['/updateproject']" class="btn btn-primary">Update Project</a>&nbsp;
+<a [routerLink]="['/viewbacklogs']" class="btn btn-primary">View Backlogs</a>
+
+<router-outlet>
+
+    
+</router-outlet>     -->
+
+
+
+
+<body>
+    <div class="background">
+        <div class="topnav">
+            <h1>Project Dashboard</h1>
+          </div>
+    <div class="buttons">
+        <div class="row1">
+    
+    <button class="glow-on-hover" [routerLink]="['/addproject']" type="button">ADD PROJECT</button>
+    <button class="glow-on-hover" [routerLink]="['/updateproject']" type="button">UPDATE PROJECT</button>
+    <button class="glow-on-hover" [routerLink]="['/deleteproject']" type="button">DELETE PROJECT</button>
+        </div>   
+        <div class="row2">
+    <button class="glow-on-hover" [routerLink]="['/viewprojects']" type="button">VIEW PROJECTS</button>
+    <button class="glow-on-hover" [routerLink]="['/viewbacklogs']" type="button">VIEW BACKLOGS</button>
+        </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,107 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Add New Project Task
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form #frm="ngForm" >
+           
+                <label for="id">Project Task Id</label>
+                <input type="text" #id="ngModel" name="projectTask.ptsk_Id" id="" class="form-control" placeholder="Enter Project Task Id"  required pattern="[0-9]{2}" [(ngModel)] = "projectTask.ptsk_Id">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Project Id must be Entered<br>Enter 2 digit ID
+            </div>
+            <br>
+           <div class="form-group" >
+                <label for="name">Project Task Summary</label>
+                <input type="text"   name="projectTask.summary" id="" class="form-control" placeholder="Enter Task summary"  required [(ngModel)] = "projectTask.summary">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger"> </div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Backlog ID</label>
+                <input type="text"   name="projectTask.backlog.bid" id="" class="form-control" placeholder="Enter unique backlog id" required pattern="[0-9]{3}" [(ngModel)] = "projectTask.backlog.bid">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter 3 digit ID</div>
+
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Task Identifier</label>
+                <input type="text"   name="projectTask.backlog.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[0-9]{1}" [(ngModel)] = "projectTask.backlog.projectIdentifier">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter unique project identifier</div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Acceptance Criteria</label>
+                <input type="text"   name="projectTask.acceptanceCriteria" id="" class="form-control" placeholder="Enter acceptance criteria" required [(ngModel)] = "projectTask.acceptanceCriteria">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter start date in yyyy-mm-dd format</div>
+  
+  
+            </div> 
+            
+            <br>
+            <div class="form-group">
+                <label for="name">Task Priority</label>
+                <input type="text"   name="projectTask.priority" id="" class="form-control" placeholder="Enter end date" required pattern="[1-9]{1}" [(ngModel)] = "projectTask.priority">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter priority number</div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Task Status</label>
+                <input type="text"   name="projectTask.status" id="" class="form-control" placeholder="Enter task status" required  [(ngModel)] = "projectTask.status">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger"></div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Task Created At</label>
+                <input type="text"   name="projectTask.createdAt" id="" class="form-control" placeholder="Enter creation date" required [(ngModel)] = "projectTask.createdAt">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter date in yyyy-mm-dd format</div>
+  
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Task Due Date</label>
+                <input type="text"   name="projectTask.dueDate" id="" class="form-control" placeholder="Enter due date" required [(ngModel)] = "projectTask.dueDate">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter date in yyyy-mm-dd format</div>
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Task Updated At</label>
+                <input type="text"   name="projectTask.updatedAt" id="" class="form-control" placeholder="Enter updated date" required [(ngModel)] = "projectTask.updatedAt">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter date in yyyy-mm-dd format</div>
+  
+            </div>
+            <br>
+
+            <!-- <div class="form-group">
+                <label for="name">Backlog Identifier</label>
+                <input type="text"   name="project.backlog.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "project.backlog.projectIdentifier">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter unique identifier</div>
+
+            </div>
+            <br> -->
+            
+            <div class="from-group">
+                 <button type="submit" [disabled]="frm.invalid" (click)="addProjectTask()" class="btn btn-primary btn-md">Add Project Task</button>
+            </div>
+            <br>
+        </form>
+      </div>
+    </div>
+  </div>
+

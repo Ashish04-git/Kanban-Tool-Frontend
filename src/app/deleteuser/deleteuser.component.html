@@ -1,0 +1,97 @@
+
+
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Delete User
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form>
+          <div class="from-group"> 
+        <label for="name">User Id</label>
+        <input type="text" name="id" id="" class="form-control" placeholder="Enter User Id" required [(ngModel)] = "id">&nbsp;
+        
+    </div>
+    <br>
+    <div class="from-group">
+    <button (click)="getUserById()" class="btn btn-primary btn-md">Get User</button>
+    </div>
+    <br>
+    </form>
+    </div>
+    <form>
+    <div *ngIf="flag">
+        <div class="from-group">
+        
+            
+                <label for="name">User Name</label>
+                <input type="text"   name="user.name" id="" class="form-control" placeholder="Enter User Name"  required  [(ngModel)] = "user.name" readonly>&nbsp;
+                
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input type="text"   name="user.email" id="" class="form-control" placeholder="Enter email" required [(ngModel)] = "user.email" readonly>&nbsp;
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User contact</label>
+                <input type="text"   name="user.contact" id="" class="form-control" placeholder="Enter User Contact" required [(ngModel)] = "user.contact" readonly>&nbsp;
+               
+  
+            </div>
+            
+            <br>
+            <div class="form-group">
+                <label for="name">User login</label>
+                <input type="text"   name="user.loginname" id="" class="form-control" placeholder="Enter loginname" required [(ngModel)] = "user.loginname" readonly>&nbsp;
+                
+  
+  
+            </div> 
+            
+            <br>
+
+            <div class="form-group">
+                <label for="name">User password</label>
+                <input type="password"   name="user.password" id="" class="form-control" placeholder="Enter password" required [(ngModel)] = "user.password" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">User status</label>
+                <input type="text"   name="user.status" id="" class="form-control" placeholder="Enter status" required  [(ngModel)] = "user.status" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User role</label>
+                <input type="text"   name="user.role" id="" class="form-control" placeholder="Enter role" required [(ngModel)] = "user.role" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+            
+            <div class="from-group">
+                 <button (click)="deleteUser()" class="btn btn-primary btn-md"><i class="fa fa-edit">&nbsp;</i>Delete User</button>
+            </div>
+            
+        
+      </div>
+    </form>
+
+
+
+

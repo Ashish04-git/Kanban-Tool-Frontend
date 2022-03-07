@@ -1,0 +1,99 @@
+
+
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Delete Project
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form>
+          <div class="from-group"> 
+        <label for="name">Project Id</label>
+        <input type="text" name="id" id="" class="form-control" placeholder="Enter User Id" required [(ngModel)] = "id">&nbsp;
+        
+    </div>
+    <br>
+    <div class="from-group">
+    <button (click)="viewProject()" class="btn btn-primary btn-md">Get Project</button>
+    </div>
+    <br>
+    </form>
+    </div>
+    <form>
+    <div *ngIf="flag">
+        <div class="from-group">
+        
+            
+            <label for="name">Project Name</label>
+            <input type="text"   name="project.projectName" id="" class="form-control" placeholder="Enter Project Name"  required pattern="[a-zA-Z]+" [(ngModel)] = "project.projectName" readonly>&nbsp;
+                
+  
+            </div>
+            <br>
+            <div class="form-group">
+            
+                <label for="name">Project Identifier</label>
+                <input type="text"   name="project.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "project.projectIdentifier" readonly>&nbsp;
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Project Start date</label>
+                <input type="text"   name="project.startDate" id="" class="form-control" placeholder="Enter start date" required [(ngModel)] = "project.startDate" readonly>&nbsp;
+               
+  
+            </div>
+            
+            <br>
+            <div class="form-group">
+                <label for="name">Project End date</label>
+                <input type="text"   name="project.endDate" id="" class="form-control" placeholder="Enter end date" required [(ngModel)] = "project.endDate" readonly>&nbsp;
+                
+  
+  
+            </div> 
+            
+            <br>
+
+            <div class="form-group">
+                <label for="name">Backlog ID</label>
+                <input type="text"   name="project.backlog.bid" id="" class="form-control" placeholder="Enter backlog Id" required pattern="[0-9]{3}" [(ngModel)] = "project.backlog.bid" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Backlog Identifier</label>
+                <input type="text"   name="project.backlog.projectIdentifier" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "project.backlog.projectIdentifier" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+            <!-- <div class="form-group">
+                <label for="name">User role</label>
+                <input type="text"   name="user.role" id="" class="form-control" placeholder="Enter role" required [(ngModel)] = "user.role" readonly>&nbsp;
+  
+  
+            </div>
+            <br> -->
+            
+            <div class="from-group">
+                 <button (click)="deleteProject()" class="btn btn-primary btn-md"><i class="fa fa-edit">&nbsp;</i>Delete Project</button>
+            </div>
+            
+        
+      </div>
+    </form>
+
+
+
+
+

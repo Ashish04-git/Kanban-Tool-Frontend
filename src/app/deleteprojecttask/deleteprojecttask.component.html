@@ -1,0 +1,93 @@
+
+
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Delete Project Task
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form>
+          <div class="from-group"> 
+        <label for="name">Project Task Id</label>
+        <input type="text" name="id" id="" class="form-control" placeholder="Enter Task Id" required [(ngModel)] = "id">&nbsp;
+        
+    </div>
+    <br>
+    <div class="from-group">
+    <button (click)="viewTask()" class="btn btn-primary btn-md">Get Project Task</button>
+    </div>
+    <br>
+    </form>
+    </div>
+    <form>
+    <div *ngIf="flag">
+        <div class="from-group">
+        
+            
+            <label for="name">Project Task summary</label>
+            <input type="text"   name="projectTask.summary" id="" class="form-control" placeholder="Enter Project Name"  required pattern="[a-zA-Z]+" [(ngModel)] = "projectTask.summary" readonly>&nbsp;
+                
+  
+            </div>
+            <br>
+            <div class="form-group">
+            
+                <label for="name">Backlog ID</label>
+                <input type="text"   name="projectTask.backlog.bid" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "projectTask.backlog.bid" readonly>&nbsp;
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Task Identifier</label>
+                <input type="text"   name="projectTask.backlog.projectIdentifier" id="" class="form-control" placeholder="Enter start date" required [(ngModel)] = "projectTask.backlog.projectIdentifier" readonly>&nbsp;
+               
+  
+            </div>
+            
+            <br>
+            <div class="form-group">
+                <label for="name">Task priority</label>
+                <input type="text"   name="projectTask.priority" id="" class="form-control" placeholder="Enter end date" required [(ngModel)] = "projectTask.priority" readonly>&nbsp;
+                
+  
+  
+            </div> 
+            
+            <br>
+
+            <div class="form-group">
+                <label for="name">Task Created At</label>
+                <input type="text"   name="projectTask.createdAt" id="" class="form-control" placeholder="Enter backlog Id" required pattern="[0-9]{3}" [(ngModel)] = "projectTask.createdAt" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="name">Task Due date</label>
+                <input type="text"   name="projectTask.dueDate" id="" class="form-control" placeholder="Enter unique identifier" required pattern="[A-Z]{2}[1-9]{1}" [(ngModel)] = "projectTask.dueDate" readonly>&nbsp;
+  
+  
+            </div>
+            <br>
+            
+            <div class="from-group">
+                 <button (click)="deleteTask()" class="btn btn-primary btn-md"><i class="fa fa-edit">&nbsp;</i>Delete Project Task</button>
+            </div>
+            
+        
+      </div>
+    </form>
+
+
+
+
+
+

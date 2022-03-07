@@ -1,0 +1,6 @@
+input.ng-valid{
+    border-left:5px green solid;
+}
+input.ng-invalid{
+    border-left:5px red solid;
+}

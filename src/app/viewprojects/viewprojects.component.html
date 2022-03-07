@@ -1,0 +1,49 @@
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Project List
+        </h1>
+       
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <table class="table table-sm table-primary">
+            <thead class="table-success" style="border:5px double">
+              <tr>
+                  <th>Project ID</th>
+                  <th>Project Name</th>
+                  <th>Project Identifier</th>
+                <th>Description</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Created At</th>
+                <th>Updated At</th>   
+                <th>Backlog ID</th>
+                <th>PT Sequence</th>              
+              </tr>
+          </thead>
+          <tbody style="border:5px double">
+            <tr *ngFor = "let p of projects" style="border:5px double">
+              
+          
+              <td>{{p.id}}</td>
+              <td>{{p.projectName}}</td>
+              <td>{{p.projectIdentifier}}</td>
+              <td>{{p.description}}</td>
+              <td>{{p.startDate}}</td>
+              <td>{{p.endDate}}</td>
+              <td>{{p.createdAt}}</td>
+              <td>{{p.updateAt}}</td> 
+              <td>{{p.backlog.bid}}</td> 
+              <td>{{p.backlog.ptSequence}}</td> 
+            </tr>
+          </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+

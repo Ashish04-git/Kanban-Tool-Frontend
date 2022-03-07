@@ -1,0 +1,36 @@
+
+<!-- <br><br>
+
+<a [routerLink]="['/viewprojecttasks']" class="btn btn-primary"> VIew Project Tasks</a>&nbsp;
+<a [routerLink]="['/addprojecttask']" class="btn btn-primary">Add Project Task</a>&nbsp;
+<a [routerLink]="['/deleteprojecttask']" class="btn btn-primary">Delete Project Task</a>&nbsp;
+<a [routerLink]="['/updateprojecttask']" class="btn btn-primary">Update Project Task</a>&nbsp;
+<a [routerLink]="['/viewTaskByIdentifier']" class="btn btn-primary">View Task By Identifier</a>
+
+<router-outlet>
+
+    
+</router-outlet> -->
+
+
+
+
+<body>
+    <div class="background">
+        <div class="topnav">
+            <h1>Task Dashboard</h1>
+          </div>
+    <div class="buttons">
+        <div class="row1">
+    
+    <button class="glow-on-hover" [routerLink]="['/addprojecttask']" type="button">ADD TASK</button>
+    <button class="glow-on-hover" [routerLink]="['/updateprojecttask']" type="button">UPDATE TASK</button>
+    <button class="glow-on-hover" [routerLink]="['/deleteprojecttask']" type="button">DELETE TASK</button>
+        </div>   
+        <div class="row2">
+    <button class="glow-on-hover" [routerLink]="['/viewprojecttasks']" type="button">VIEW TASKS</button>
+    <button class="glow-on-hover" [routerLink]="['/viewTaskByIdentifier']" type="button">VIEW TASK BT IDENTIFIER</button>
+        </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h4">
+          Add New User
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form #frm="ngForm" >
+           
+                <label for="id">User Id</label>
+                <input type="text" #id="ngModel" name="user.id" id="" class="form-control" placeholder="Enter User Id"  required pattern="[0-9]{1,2}" [(ngModel)] = "user.id">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">User Id must be Entered<br>Enter a number maximum 2 digit
+            </div>
+            <br>
+           <div class="form-group" >
+                <label for="name">User Name</label>
+                <input type="text"   name="user.name" id="" class="form-control" placeholder="Enter User Name"  required pattern="[a-zA-Z]+" [(ngModel)] = "user.name">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter minimum 3 letters</div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input type="text"   name="user.email" id="" class="form-control" placeholder="Enter email" required [(ngModel)] = "user.email">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter valid email</div>
+
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User contact</label>
+                <input type="text"   name="user.contact" id="" class="form-control" placeholder="Enter User Contact" required pattern="[789]{1}[0-9]{9}" [(ngModel)] = "user.contact">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Sorry User Id must be Entered<br>Enter 10 digit number</div>
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User login</label>
+                <input type="text"   name="user.loginname" id="" class="form-control" placeholder="Enter loginname" required pattern="[A-Z]{2}" [(ngModel)] = "user.loginname">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter maximum 2 Letters</div>
+  
+  
+            </div> 
+            
+            <br>
+            <div class="form-group">
+                <label for="name">User password</label>
+                <input type="password"   name="user.password" id="" class="form-control" placeholder="Enter password" required pattern="[A-Z]{2}[0-9]{2}" [(ngModel)] = "user.password">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter password</div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User status</label>
+                <input type="text"   name="user.status" id="" class="form-control" placeholder="Enter status" required  [(ngModel)] = "user.status">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter status</div>
+  
+  
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="name">User role</label>
+                <input type="text"   name="user.role" id="" class="form-control" placeholder="Enter role" required [(ngModel)] = "user.role">&nbsp;
+                <div class="from-group" *ngIf="id.invalid" class="alert alert-danger">Enter role</div>
+  
+  
+            </div>
+            <br>
+            
+            <div class="from-group">
+                 <button type="submit" [disabled]="frm.invalid" (click)="addUser()" class="btn btn-primary btn-md">Add User</button>
+            </div>
+            <br>
+        </form>
+      </div>
+    </div>
+  </div>
